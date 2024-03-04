@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class MainController {
-    @GetMapping("/{num}")
-    public String sendHello(@PathVariable int num){
-        return "hello"+num;
+    @GetMapping("/calc/sum/{x}/{y}")
+    public String sendHello(@PathVariable int x ,@PathVariable int y){
+        return "x+y= "+ (x+y);
     }
 }
